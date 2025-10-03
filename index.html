@@ -1,64 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="CSS/Head.css">
-    <link rel="stylesheet" href="CSS/homepage.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Navbar & Controls</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      margin-top: 120px; /* offset for nav + controls */
+      background: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.7);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      top: 60px; /* directly under navbar */
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.7);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      z-index: 999;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background: rgba(0, 119, 255, 0.8);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Just filler content to test scrolling */
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
 <body>
-    <section class="hero">
-        <header>
-            <nav id="nav">
-                <ul>
-                    <li><a href="homepage.html" class="active">Homepage</a></li>
-                    <li><a href="About us.html">About us</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="main.html">Learn</a></li>
-                    <li><a href="Contact us.html">Contact us</a></li>
-                    <li class="r"><a href="For devalopers.html">For devalopers</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="hero-content">
-            <h1>Welcome to Our Website</h1>
-            <p>We create modern solutions that are simple, effective, user-friendly and help newbies learn.</p>
-            <a href="main.html" class="cta-btn">Start Learning</a>
-        </div>
-    </section>
-    <section class="about-preview">
-        <h2>Who We Are</h2>
-        <p>
-            We’re a dedicated team of professionals passionate about technology and innovation.
-            Our goal is to provide reliable, accessible Learning for everyone and help our loved customers to create
-            their own websites.
-        </p>
-        <a href="About us.html" class="link-btn">Learn More</a>
-    </section>
-    <section class="services-preview">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Web Development</h3>
-                <p>We build responsive and modern websites tailored to your needs.</p>
-            </div>
-            <div class="service-card">
-                <h3>Software Solutions</h3>
-                <p>Custom software to help your business grow efficiently.</p>
-            </div>
-            <div class="service-card">
-                <h3>Support</h3>
-                <p>Reliable support team always ready to assist you and remove all bariers between learning and you.</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>© 2025 Your Company. All rights reserved.</p>
-    </footer>
+
+  <nav>
+    <div>LOGO</div>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Learn</a>
+      <a href="#">About</a>
+    </div>
+  </nav>
+
+  <div class="controls">
+    <button>Option 1</button>
+    <button>Option 2</button>
+    <button>Option 3</button>
+  </div>
+
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque...</p>
+    <p style="height:2000px;">Scroll down to test fixed nav & controls...</p>
+  </div>
 
 </body>
-
 </html>
