@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn</title>
+
+    <link rel="stylesheet" href="CSS/head.css">
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+
+<body>
+    <!-- Brand header -->
+    <header class="site-header">
+        <div class="brand">
+            <img src="CSS/img/logo.png" alt="Codenest logo" class="logo">
+            <span class="brand-name">Codenest</span>
+        </div>
+    </header>
+
+    <div class="controls-container">
+        <nav id="nav" aria-label="primary">
+            <ul>
+                <li><a href="homepage.html">Homepage</a></li>
+                <li><a href="About us.html">About us</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="main.html" class="active">Learn</a></li>
+                <li><a href="Contact us.html">Contact us</a></li>
+                <li class="r"><a href="For devalopers.html">For devalopers</a></li>
+            </ul>
+        </nav>
+
+        <div class="controls">
+            <input id="search" type="search" placeholder="Search title or description..." aria-label="Search examples">
+            <select name="filter" id="filter" aria-label="Filter by language">
+                <option value="all">All</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+            </select>
+            <select name="limit" id="limit" aria-label="Limit results">
+                <option value="10">Show 10</option>
+                <option value="20">Show 20</option>
+                <option value="30">Show 30</option>
+                <option value="50">Show 50</option>
+            </select>
+        </div>
+    </div>
+
+    <main>
+        <div id="examples-wrapper">
+            <div id="examples-container" aria-live="polite"></div>
+        </div>
+    </main>
+
+    <script src="JS/cards.js" defer></script>
+    <script src="JS/main.js" defer></script>
+</body>
+
+</html>
